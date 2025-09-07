@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "RobotoLight";
+  src: url("fonts/Roboto-Light.woff2") format("woff2"),
+    url("fonts/Roboto-Light.woff") format("woff"),
+    url("fonts/Roboto-Light.ttf") format("truetype");
+}
+
+:root {
+  --base-col: #cae0ea;
+  --acc-col: #05c4f4;
+  --text-col: #171717;
+  --dim-col: #101010;
+  --anim-all: all 200ms ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "RobotoLight";
+}
+
+body {
+  background-color: var(--base-col);
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  color: var(--base-col);
+  background-color: var(--text-col);
+  margin-top: 64px;
+  padding-top: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px var(--dim-col);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.display {
+  text-align: right;
+  font-size: 3em;
+  padding-right: 15px;
+  transition: var(--anim-all);
+  -webkit-transition: var(--anim-all);
+  -moz-transition: var(--anim-all);
+  -ms-transition: var(--anim-all);
+  -o-transition: var(--anim-all);
+}
+
+.history {
+  text-align: right;
+  font-size: 2.5em;
+  padding-right: 15px;
+  opacity: 0.75;
+  transition: var(--anim-all);
+  -webkit-transition: var(--anim-all);
+  -moz-transition: var(--anim-all);
+  -ms-transition: var(--anim-all);
+  -o-transition: var(--anim-all);
+}
+
+.overflow {
+  font-size: 2em;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 288px;
+  margin: 0 15px 15px 15px;
+  padding-top: 10px;
+  justify-content: space-around;
+  border-top: 1px solid var(--acc-col);
+}
+
+button {
+  font-size: 1.2em;
+  width: 64px;
+  height: 64px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  color: var(--base-col);
+  transition: var(--anim-all);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-transition: var(--anim-all);
+  -moz-transition: var(--anim-all);
+  -ms-transition: var(--anim-all);
+  -o-transition: var(--anim-all);
+}
+
+button:active {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+button:hover {
+  background-color: var(--dim-col);
+}
+
+#key-1,
+#key-2,
+#key-3,
+#key-4,
+#key-8,
+#key-12,
+#key-16 {
+  color: var(--acc-col);
+  font-weight: bold;
+}
+
+#key-20 {
+  color: var(--text-col);
+  background-color: var(--acc-col);
+  font-weight: bold;
+}
